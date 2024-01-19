@@ -72,16 +72,16 @@
   </style>
 
   <script> /* Javascript */
-    const secondHand = document.querySelector('.second-hand');
+    const secondHand = document.querySelector('.second-hand'); /* the overall effect of this line is to select the HTML element with the class name "second-hand" and store it in the constant variable secondHand for further manipulation or interaction within the JavaScript code. */
     const minsHand = document.querySelector('.min-hand');
     const hourHand = document.querySelector('.hour-hand');
 
-    function setDate() {
-      const now = new Date();
+    function setDate() { /* This line declares a JavaScript function named setDate. Functions are blocks of reusable code that can be executed when called. */
+      const now = new Date(); /* This line creates a new Date object named now, representing the current date and time when this line is executed. This object is used to get information about the current time. */
 
-      const seconds = now.getSeconds();
-      const secondsDegrees = ((seconds / 60) * 360) + 90;
-      secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+      const seconds = now.getSeconds(); /* This line retrieves the current seconds from the now object using the getSeconds method. It stores the value in the variable seconds. */
+      const secondsDegrees = ((seconds / 60) * 360) + 90; /* This line calculates the degrees by which the second hand needs to be rotated. It takes into account the current number of seconds and maps it to a rotation angle on a clock face (360 degrees). The + 90 is likely used to offset the initial rotation. */
+      secondHand.style.transform = `rotate(${secondsDegrees}deg)`; /* This line sets the CSS transform property of the HTML element with the class name "second-hand" (presumably selected earlier in the code) to rotate by the calculated secondsDegrees. This visually updates the rotation of the second hand on a clock. */
       
       const mins = now.getMinutes();
       const  minsDegrees = ((mins  / 60) * 360) + 90;
@@ -91,9 +91,9 @@
       const  hourDegrees = ((mins  / 12) * 360) + 90;
       hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 
-    }
+    } /* Closes the setDate function. */
 
-    setInterval(setDate, 1000);
+    setInterval(setDate, 1000); /* This line uses the setInterval function to call the setDate function every 1000 milliseconds (1 second). This creates a continuous loop, updating the clock hands in real-time as each second passes. */
   </script>
 </body>
 </html>
