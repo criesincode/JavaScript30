@@ -17,33 +17,33 @@
     </div>
 
 
-  <style>
+  <style> /* CSS */
     html {
-      background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
-      background-size: cover;
-      font-family: 'helvetica neue';
-      text-align: center;
-      font-size: 10px;
+      background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5); /* background image */
+      background-size: cover; /* makes background image cover entire page */
+      font-family: 'helvetica neue'; /* unknown */
+      text-align: center; /* unknown */
+      font-size: 10px; /* controls size of clock making it smaller */
     }
 
     body {
-      margin: 0;
-      font-size: 2rem;
-      display: flex;
-      flex: 1;
-      min-height: 100vh;
-      align-items: center;
+      margin: 0; /* adujust centered items slightly */
+      font-size: 2rem; /* unknown */
+      display: flex; /* centers clock */
+      flex: 1; /* unknown */
+      min-height: 100vh; /* makes background image cover entire page */
+      align-items: center; /* center's clock */
     }
 
     .clock {
-      width: 30rem;
-      height: 30rem;
-      border: 20px solid white;
-      border-radius: 50%;
-      margin: 50px auto;
-      position: relative;
-      padding: 2rem;
-      box-shadow:
+      width: 30rem; /* creates shape size */
+      height: 30rem; /* creates shape size */
+      border: 20px solid white; /* adjust thickness, specifies border type and color of border */
+      border-radius: 50%; /* changes box (div) size from a square to a circle */
+      margin: 50px auto; /* brings clock to center of page insead of being on the left side of page */
+      position: relative; /* the clock will always stay in the same place, no matter if you scroll */
+      padding: 2rem; /* add space between clock hands (content) and border */
+      box-shadow: /* controls shadow effect */
         0 0 0 4px rgba(0,0,0,0.1),
         inset 0 0 0 3px #EFEFEF,
         inset 0 0 10px black,
@@ -51,27 +51,27 @@
     }
 
     .clock-face {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transform: translateY(-3px); /* account for the height of the clock hands */
+      position: relative; /* keeps clock in place no matter if page scrolls */
+      width: 100%; /* unknown */
+      height: 100%; /* brings clock hands to the center of the clock */
+      transform: translateY(-3px); /* account for the height of the clock hands ..slighty adjust height of clock hands*/
     }
 
     .hand {
-      width: 50%;
-      height: 6px;
-      background: black;
-      position: absolute;
-      top: 50%;
-      transform-origin: 100%;
-      transform: rotate(90deg);
-      transition: all 0.05s;
-      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+      width: 50%; /* adjust size of clock hands */
+      height: 6px; /* creates appearance of clock hands by make the divs very short, creating lines */
+      background: black; /* sets color of clock hands */
+      position: absolute; /* centers clock hands to the middle of clock */
+      top: 50%; /* centers clock hands to the middle of clock */
+      transform-origin: 100%; /* property allows you to change the position of transformed elements */
+      transform: rotate(90deg); /* the object around the given axis by the number of degrees defined by the given angle. */
+      transition: all 0.05s; /* specifies what will have a transition and the duration of the transition */
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); /* transition-timing-function property specifies the speed curve of the transition effect. You define your own values in the cubic-bezier function */
     }
 
   </style>
 
-  <script>
+  <script> /* Javascript */
     const secondHand = document.querySelector('.second-hand');
     const minsHand = document.querySelector('.min-hand');
     const hourHand = document.querySelector('.hour-hand');
