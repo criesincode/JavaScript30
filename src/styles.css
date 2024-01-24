@@ -1,7 +1,8 @@
 /* Change the colors for the background, font, button and links, and box shadows. */
 :root {
-    --main-theme-primary-color: #DDDDDD;
-    --main-theme-secondary-color: #000000;
+    --main-theme-primary-color: #E4E3D3;
+    --main-theme-secondary-color: #337357;
+    --main-theme-secondary-color2: #6D9F71;
     --main-theme-accent-color: #0000ff;
     --main-theme-box-shadow-color: rgba(0, 0, 0, 0.5);
     /* remove all the alternate theme colors if you don't want an alternate theme*/
@@ -11,6 +12,9 @@
     --alternate-theme-box-shadow-color: rgba(255, 255, 255, 0.5);
 }
 
+h3 {
+    color: var(--main-theme-secondary-color2);
+}
 body {
     background: var(--main-theme-primary-color);
     color: var(--main-theme-secondary-color);
@@ -27,9 +31,9 @@ header {
 }
 
 .header-image {
-    width: 100px;
+    width: 17.1875rem;
     height: 18.75rem;
-    border-radius: 25%;
+    border-radius: 50%;
 }
 
 .themeButton {
