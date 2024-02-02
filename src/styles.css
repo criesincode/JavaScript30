@@ -185,6 +185,11 @@ a:hover {
     color: var(--alternate-theme-secondary-color);
 }
 
+.icon {
+    width: .9375rem;
+    height: .9375rem;
+}
+
 footer {
     align-self: end;
     font-size: 10px;
